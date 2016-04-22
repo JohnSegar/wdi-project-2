@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
 
+gem 'devise',           '~> 3.5.2'
+gem 'devise_invitable', '~> 1.5.2'
+gem "letter_opener", :group => :development
+
 gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
