@@ -63,13 +63,13 @@ class WeddingsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_wedding
       @wedding = Wedding.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def wedding_params
-      params.require(:wedding).permit(:name, :owner_id)
+      # Caroline:
+      # params.require(:wedding).permit(:title, :owner_id)
+      params.require(:wedding).permit(:title, :user_id)
     end
 end
