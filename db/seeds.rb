@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 u1 = User.create!(email: "johnjohn@johnjohn.com", password: "password")
-Wedding.create!(title: "John's Potato Wedding", user_id: u1.id, description: "Potatos", image: "http://i.imgur.com/PcCyTzp.jpg")
+Wedding.create!(title: "John's Potato Wedding", user_id: u1.id, description: "Potatos", info: "John's Wedding", image: "http://i.imgur.com/PcCyTzp.jpg")
