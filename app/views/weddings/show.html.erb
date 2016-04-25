@@ -7,7 +7,11 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @wedding.owner_id%>
+  <%= @wedding.user_id%>
+</p>
+
+<p>
+  <%= @wedding.image%>
 </p>
 
 <%= link_to 'Edit', edit_wedding_path(@wedding) %> |
