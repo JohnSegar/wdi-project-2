@@ -1,20 +1,28 @@
 class WeddingsController < ApplicationController
   before_action :set_wedding, only: [:show, :edit, :update, :destroy]
 
+  # GET /weddings
+  # GET /weddings.json
   def index
     @weddings = Wedding.all
   end
 
+  # GET /weddings/1
+  # GET /weddings/1.json
   def show
   end
 
+  # GET /weddings/new
   def new
     @wedding = Wedding.new
   end
 
+  # GET /weddings/1/edit
   def edit
   end
 
+  # POST /weddings
+  # POST /weddings.json
   def create
     @wedding = Wedding.new(wedding_params)
 
@@ -29,6 +37,8 @@ class WeddingsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /weddings/1
+  # PATCH/PUT /weddings/1.json
   def update
     respond_to do |format|
       if @wedding.update(wedding_params)
@@ -41,6 +51,8 @@ class WeddingsController < ApplicationController
     end
   end
 
+  # DELETE /weddings/1
+  # DELETE /weddings/1.json
   def destroy
     @wedding.destroy
     respond_to do |format|
@@ -50,10 +62,12 @@ class WeddingsController < ApplicationController
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
     def set_wedding
       @wedding = Wedding.find(params[:id])
     end
 
+    # Never trust parameters from the scary internet, only allow the white list through.
     def wedding_params
       params.require(:wedding).permit(:name, :owner_id)
     end
