@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
 
+gem 'foundation-rails', '~> 5.5.3'
+
 gem 'devise',           '~> 3.5.2'
 gem 'devise_invitable', '~> 1.5.2'
 gem "letter_opener", :group => :development

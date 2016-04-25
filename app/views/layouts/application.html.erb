@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>WdiProject2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <% if user_signed_in? %> 
-          <li><%= current_user.email %></li>  
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "Invite Guest", new_user_invitation_path %></li>
-          <li><%= link_to "Me", user_path(current_user.id) %></li>
-          <li><%= link_to "Edit Account", edit_user_registration_path %></li>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-          <li><%= link_to "Register", new_user_registration_path %></li>
-        <% end %>
-          <li><%= link_to "Home", "/" %></li>
-      </ul>
-    </nav>
-  </header>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <title><%= content_for?(:title) ? yield(:title) : "Wedding" %></title>
 
-<%= yield %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-</body>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <% if user_signed_in? %> 
+            <li><%= current_user.email %></li>  
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "Invite Guest", new_user_invitation_path %></li>
+            <li><%= link_to "Me", user_path(current_user.id) %></li>
+            <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+          <% else %>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+            <li><%= link_to "Register", new_user_registration_path %></li>
+          <% end %>
+            <li><%= link_to "Home", "/" %></li>
+        </ul>
+      </nav>
+    </header>
+  <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+  <%= yield %>
+
+  </body>
 </html>
