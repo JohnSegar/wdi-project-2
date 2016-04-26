@@ -7,18 +7,20 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @wedding.description%>
+  <%= @wedding.description %>
 </p>
 
 <p>
   <strong>Info:</strong>
-  <%= @wedding.info%>
+  <%= @wedding.info %>
 </p>
 
 
 <p>
   <%= @wedding.image %>
 </p>
+
+
 
 <%= render partial: 'comments/form', locals: { commentable: @wedding } %>
 

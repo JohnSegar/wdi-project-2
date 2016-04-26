@@ -70,6 +70,6 @@ class WeddingsController < ApplicationController
     def wedding_params
       # Caroline:
       # params.require(:wedding).permit(:title, :owner_id)
-      params.require(:wedding).permit(:title, :user_id)
+      params.require(:wedding).permit(:title, :description, :info)
     end
 end
