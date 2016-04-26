@@ -7,6 +7,8 @@ gem 'carrierwave', '0.10.0'
 
 gem 'acts_as_commentable', '4.0.2'
 
+gem 'masonry-rails'
+
 gem 'devise',           '~> 3.5.2'
 gem 'devise_invitable', '~> 1.5.2'
 gem "letter_opener", :group => :development
