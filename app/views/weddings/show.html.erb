@@ -27,5 +27,16 @@
 <%= render partial: 'comments/form', locals: { commentable: @wedding } %>
 <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @wedding } %>
 
+  <div class="card">
+  <div class="row">
+    <div class="image medium-3 columns"> 
+       <%= image_tag wedding.image %>
+       </div>
+    <div class="content medium-9 columns">
+      
+    </div>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_wedding_path(@wedding) %> |
 <%= link_to 'Back', weddings_path %>
