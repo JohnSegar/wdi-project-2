@@ -1,32 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
   <%= @wedding.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
   <%= @wedding.description %>
 </p>
 
 <p>
-  <strong>Info:</strong>
   <%= @wedding.info %>
 </p>
-
 
 <p>
   <%= @wedding.image %>
 </p>
 
-
-
 <%= render partial: 'comments/form', locals: { commentable: @wedding } %>
 
-<ul class="small-block-grid-3">
+<ul class="grid">
   <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @wedding } %>
 </ul>
+
 
 <%= link_to 'Edit', edit_wedding_path(@wedding) %> |
 <%= link_to 'Back', weddings_path %>
