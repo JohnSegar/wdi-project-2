@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @wedding.user_id%>
+  <strong>Description:</strong>
+  <%= @wedding.description%>
 </p>
 
 <p>
@@ -15,28 +15,16 @@
   <%= @wedding.info%>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @wedding.description%>
-</p>
 
 <p>
   <%= @wedding.image %>
 </p>
 
 <%= render partial: 'comments/form', locals: { commentable: @wedding } %>
-<%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @wedding } %>
 
-  <div class="card">
-  <div class="row">
-    <div class="image medium-3 columns"> 
-       <%= image_tag wedding.image %>
-       </div>
-    <div class="content medium-9 columns">
-      
-    </div>
-  </div>
-</div>
+<ul class="small-block-grid-3">
+  <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @wedding } %>
+</ul>
 
 <%= link_to 'Edit', edit_wedding_path(@wedding) %> |
 <%= link_to 'Back', weddings_path %>
