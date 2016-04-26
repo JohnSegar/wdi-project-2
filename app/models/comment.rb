@@ -12,4 +12,7 @@ class Comment < ActiveRecord::Base
   #acts_as_voteable
 
   # NOTE: Comments belong to a user
+
+  mount_uploader :image, CommentImageUploader
+
 end

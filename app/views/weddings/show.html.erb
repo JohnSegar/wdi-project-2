@@ -1,6 +1,3 @@
-<%= render partial: 'comments/form', locals: { commentable: @wedding } %>
-<%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @wedding } %>
-
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -27,7 +24,8 @@
   <%= @wedding.image %>
 </p>
 
-
+<%= render partial: 'comments/form', locals: { commentable: @wedding } %>
+<%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @wedding } %>
 
 <%= link_to 'Edit', edit_wedding_path(@wedding) %> |
 <%= link_to 'Back', weddings_path %>

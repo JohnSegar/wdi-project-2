@@ -26,7 +26,7 @@ class WeddingsController < ApplicationController
   # POST /weddings.json
   def create
     @wedding = Wedding.new(wedding_params)
-
+    @wedding.user_id = current_user.id
     respond_to do |format|
       if @wedding.save
         format.html { redirect_to @wedding, notice: 'Wedding was successfully created.' }
