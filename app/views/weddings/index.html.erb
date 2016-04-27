@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Weddings</h1>
+<h1>Weddings</h1>
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
         <td><%= wedding.user_id %></td>
         <td><%= link_to 'Show', wedding %></td>
         <td><%= link_to 'Edit', edit_wedding_path(wedding) %></td>
-        <td><%= link_to 'Destroy', wedding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', wedding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

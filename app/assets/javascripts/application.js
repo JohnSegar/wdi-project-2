@@ -13,12 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require turbolinks
+
 //= require_tree .
 //= require masonry.pkgd.min.js
 
 $(function(){ $(document).foundation(); 
 
+  // require turbolinks
   // init Masonry
 
 /*
@@ -32,11 +33,16 @@ $(function(){ $(document).foundation();
 */
 
 
-  var $grid = $('.grid').masonry({
+  var $grid = $('.grid')
 
-  columnWidth: 200,
-  itemSelector: '.grid-item'
-  });
+  $grid.imagesLoaded()
+    .done(function() {
+      $grid.masonry({
+        columnWidth: 200,
+        itemSelector: '.grid-item'
+      });
+    })
+  
 
 
   // var $container = $('.grid');

@@ -1,8 +1,6 @@
-<%= @guests.inspect %>
-
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="title">
   <%= @wedding.title %>
 </p>
 
@@ -24,7 +22,10 @@
   <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @wedding } %>
 </ul>
 
-<%= @users.email %>
+<% @guests.each do |guest| %>
+<%= guest.email %>
+<% end %>
+
 
 <%= link_to 'Edit', edit_wedding_path(@wedding) %> |
 <%= link_to 'Back', weddings_path %>
