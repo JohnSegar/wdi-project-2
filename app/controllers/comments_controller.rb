@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
     respond_to do |format|
-      format.html {redirect_to @commentable, notice: "Your comment was successfully destroyed."}
+      format.html {redirect_to @commentable, notice: "Your comment was successfully deleted."}
       format.json { head :no_content }
     end
   end

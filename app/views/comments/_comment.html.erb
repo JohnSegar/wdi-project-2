@@ -1,7 +1,15 @@
 <li class='grid-item'>
   <ul>
     <li><%= comment.user.try(:name) %></li>
+    <div class="reveal" id="exampleModal1" data-reveal>
+    <ul class="grid">
     <li><%= image_tag comment.image.url %></li>
+    <!-- <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+      <p><a data-open="exampleModal1">Click to enlarge</a></p>
+    </ul>
+    </div>
     <li><%= comment.comment %></li>
     <li><%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %></li> 
   </ul>
