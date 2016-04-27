@@ -2,9 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  // background-image: url("http://i.imgur.com/7j7XZ5u.jpg"); 
+  background-image: url("http://i.imgur.com/ExWURno.png"); 
   background-color: snow;
-  background-size: 100%;
   list-style-type: none;
   background-attachment: fixed;
   text-align: center;
@@ -13,6 +12,31 @@ body {
 ul, menu, dir{
   list-style-type: none;
 }
+
+.top-bar-section ul li {
+  background: #6B1229;
+}
+
+.has-dropdown not-click {
+  background: #6B1229;
+}
+
 .field {
   text-align: center;
+}
+
+.top-bar {
+  height: 75px;
+  background: #6B1229;
+
+}
+
+.right {
+  text-align: center;
+  color: snow;
+  position: center;
+}
+
+.logo {
+  height: 2px
 }
