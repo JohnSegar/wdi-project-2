@@ -10,7 +10,11 @@ class WeddingsController < ApplicationController
   # GET /weddings/1
   # GET /weddings/1.json
   def show
-      @comments = Wedding.find(params[:id]).comments
+    @wedding = Wedding.find(params[:id])
+    @comments = @wedding.comments
+    @guests = Invite.where(wedding_id: @wedding.id).map do |invite| 
+      User.find(invite.receiver_id)
+    end
   end
 
   # GET /weddings/new
