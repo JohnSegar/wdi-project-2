@@ -17,7 +17,9 @@
 //= require_tree .
 //= require masonry.pkgd.min.js
 
-$(function(){ $(document).foundation(); 
+$(function(){ 
+
+  $(document).foundation(); 
 
   // require turbolinks
   // init Masonry
@@ -38,11 +40,19 @@ $(function(){ $(document).foundation();
   $grid.imagesLoaded()
     .done(function() {
       $grid.masonry({
-        columnWidth: 200,
+        columnWidth: 0,
         itemSelector: '.grid-item'
+      });
+      $(window).resize(function() {
+        $grid.masonry({
+          // columnWidth: 200,
+          // itemSelector: '.grid-item'
+        });
       });
     })
   
+
+
 
 
   // var $container = $('.grid');
