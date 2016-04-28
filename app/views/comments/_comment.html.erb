@@ -1,31 +1,22 @@
 <li class='grid-item'>
   <ul>
     <li><%= comment.user.try(:email) %></li>
-      <ul class="grid">
-        
-        <div class="reveal" id="exampleModal1" data-reveal>
-         <li><%= image_tag comment.image.url %></li>
-    <!-- <button class="close-button" data-close aria-label="Close modal" type="button">
-        <span aria-hidden="true">&times;</span>
-         </button> -->
-       <p><a data-open="exampleModal1">Click to enlarge</a></p>
-       <li><%= comment.comment %></li>
-       <!-- <li><%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>   -->
-      </ul>
-    </div>
-     
-<li><%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <ul class="grid">
+      <a href="#" data-reveal-id="_<%= comment.id %>"><%= image_tag comment.image.url %></a>
+      <div class="large reveal" id="<%= comment.id %>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <li><%= comment.comment %></li>
+      </div>
   </ul>
+</ul>
 </li> 
 
+<div class='grid-item'>
+  <div id="_<%= comment.id %>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true"  role="dialog">
+    <%= image_tag comment.image.url %>
+    <p><%= comment.comment %></p>
+    <p>Uploaded by <%= comment.user.try(:email) %></p>
+    <%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore,  commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  </div>
+</div> 
 
-<!-- Modal click on image and it reveals: 
-<a href="#" data-reveal-id="_<%= comment.id %>"><%= image_tag comment.image.url %></a>
-<div id="_<%= comment.id %>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <%= image_tag comment.image.url %>
-  <p><%= comment.comment %></p>
-  <p>Uploaded by <%= comment.user.try(:email) %></p>
-  <%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
--->
