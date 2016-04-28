@@ -12,6 +12,7 @@
   <% end %>
 
 <div class="row">
+
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -26,6 +27,12 @@
     <%= f.label :info %><br>
     <%= f.text_area :info %>
   </div>
+
+  <div class="fieldshow">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+
   
   <div class="actions">
     <%= f.submit %>
