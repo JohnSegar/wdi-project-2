@@ -21,7 +21,7 @@ $(function(){
 
   $(document).foundation(); 
 
-  // require turbolinks
+  
   // init Masonry
 
 /*

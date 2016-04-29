@@ -7,6 +7,8 @@ class Wedding < ActiveRecord::Base
   has_many :invites
   belongs_to :user
   acts_as_commentable
+
+  mount_uploader :image, CommentImageUploader
 end
 
   

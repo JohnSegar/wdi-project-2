@@ -1,18 +1,16 @@
 <div class='medium-4 columns'>
-<div class="card">
-      <div class="image">
+  <div class="card">
+    <div class="imageindex">
+      <%= link_to wedding do %>
         <%= image_tag wedding.image %>
-        <td><%= link_to 'Show', wedding %></td>
-        <span class="title"><%= wedding.title %></span>
-      </div>
-      <div class="content">
+      <% end %>
+    </div>
+    <span class="title"><%= wedding.title %></span>
+    <div class="content">
         <p><%= wedding.description %></p>
-      </div>
-      <!-- <div class="action">
-        <a href='#'>Where this leads</a>
-      </div> -->
+    </div>
       <td><%= link_to 'Edit', edit_wedding_path(wedding) %></td>
       <br>
       <td><%= link_to 'Delete', wedding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </div>
+  </div>
 </div>
