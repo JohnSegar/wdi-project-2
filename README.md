@@ -11,7 +11,7 @@ The idea behind this app came from my sister. Before starting the app, my sister
 
 
 ### Technologies
-HTML, SCSS and Ruby on Rails (and JQuery).
+HTML, SCSS, Javascript and Ruby on Rails.
 
 ![Screenshot 3](http://i.imgur.com/QNqWq6p.png)
 
