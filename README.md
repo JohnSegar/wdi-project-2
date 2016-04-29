@@ -16,4 +16,4 @@ HTML, SCSS and Ruby on Rails (and JQuery).
 ![Screenshot 3](http://i.imgur.com/QNqWq6p.png)
 
 ###Creits
-Lexi Russel and Imogen Hill for their wedding phots.
+Lexi Russel and Imogen Hill for their wedding photos.
