@@ -17,3 +17,5 @@ HTML, SCSS, Javascript and Ruby on Rails.
 
 ###Credits
 Lexi Russel and Imogen Hill for their wedding photos.
+
+
