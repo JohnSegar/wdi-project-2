@@ -5,7 +5,7 @@
 
 ###Introduction
 
-The idea behind this app came from my sister. Before starting the app, my sister recently got engaged and was talking how she would like to have all her info for the guests in one place and that information can be edited at any time. Guest's can also upload photos, with the idea that on the actual day the guests can upload the photos they take with their phones to the website so the bride/groom have them all in one place.
+The idea behind this app came from my sister. Before starting the app, my sister recently got engaged and was talking how she would like to have all her info for the guests in one place, and that information can be edited at any time. Guest's can also upload photos, with the idea that on the actual day the guests can upload the photos they take with their phones to the website so the bride/groom have them all in one place.
 
 ![Screenshot 2](http://i.imgur.com/u2j1nI8.png)
 
