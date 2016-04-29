@@ -1,5 +1,5 @@
 #WEDDIT
-######An app for people organising their weddings where all the guests can see information about the big day, and also upload pictures and comments to the same place.
+######An app for people organising their weddings where all the guests can see information about the big day, and also upload pictures and comments to the same place. The 'owner' of the wedding can send emails out to anyone they want to
 
 ![Screenshot 1](http://i.imgur.com/qBGATmU.png)
 
