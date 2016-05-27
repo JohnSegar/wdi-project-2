@@ -14,12 +14,12 @@
 
 <%= render partial: 'comments/form', locals: { commentable: @wedding } %>
 
-<ul class="grid">
+<ul class="grid clearfix">
   <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @wedding } %>
 </ul>
 
 <% @guests.each do |guest| %>
-<%= guest.email %>
+  <%= guest.email %>
 <% end %>
 
 

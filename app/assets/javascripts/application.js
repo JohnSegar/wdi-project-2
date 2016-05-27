@@ -13,53 +13,25 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-
 //= require_tree .
 //= require masonry.pkgd.min.js
 
-$(function(){ 
+$(function(){
 
-  $(document).foundation(); 
+  $(document).foundation();
 
-  
-  // init Masonry
-
-/*
-  var $grid = $('.grid');
-  $grid.imagesLoaded(function() {
-    $grid.masonry({
-      columnWidth: 200,
-      itemSelector: '.grid-item'
-    });
-  });
-*/
-
-
-  var $grid = $('.grid')
-
-  $grid.imagesLoaded()
-    .done(function() {
-      $grid.masonry({
-        columnWidth: 0,
-        itemSelector: '.grid-item'
-      });
-      $(window).resize(function() {
+  initMasonry();
+  function initMasonry(){
+    var $grid = $('.grid');
+    $grid.imagesLoaded()
+      .done(function() {
         $grid.masonry({
-          // columnWidth: 200,
-          // itemSelector: '.grid-item'
+          columnWidth: 0,
+          gutter: 10,
+          itemSelector: '.grid-item'
         });
       });
-    })
-  
+  }
 
-
-
-
-  // var $container = $('.grid');
-  //   $container.imagesLoaded( function() {
-  //     $boxes.fadeIn();
-  // layout Masonry after each image loads
-  // $grid.imagesLoaded().progress( function() {
-  //   $grid.masonry('layout');
-  // });
+  $(window).on("resize", initMasonry);
 });
